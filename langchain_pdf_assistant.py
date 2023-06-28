@@ -11,6 +11,11 @@ from langchain.llms.openai import OpenAI
 from langchain.vectorstores.chroma import Chroma
 
 
+# Load OpenAI API key from .env file
+_ = load_dotenv(find_dotenv())  # read local .env file
+openai.api_key = os.environ['OPENAI_API_KEY']
+
+
 # Define bot avatar display function
 def display_avatar():
     st.image("avatar/bot_avatar.jpeg", width=100)
@@ -19,10 +24,6 @@ def display_avatar():
 def main():
     # Streamlit app
     st.title('AI-Powered Virtual Assistant')
-
-    # Load OpenAI API key from .env file
-    _ = load_dotenv(find_dotenv())  # read local .env file
-    openai.api_key = os.environ['OPENAI_API_KEY']
 
     # Get source document input
     user_doc = st.file_uploader("Upload Your PDF Document", type="pdf")
