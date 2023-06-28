@@ -91,7 +91,7 @@ def main():
 
                 # Display bot avatar and chatbot response
                 display_avatar()
-                st.markdown(f"**MindMend:** {answer}")
+                st.markdown(f"**Lazer:** {answer}")
 
                 st.write(answer)
             except Exception as e:
