@@ -93,7 +93,6 @@ def main():
                 display_avatar()
                 st.markdown(f"**Lazer:** {answer}")
 
-                st.write(answer)
             except Exception as e:
                 st.write(f"An error occurred: {e}")
 
